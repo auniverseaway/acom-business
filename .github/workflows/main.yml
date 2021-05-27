@@ -11,12 +11,13 @@ jobs:
         uses: foo-software/lighthouse-check-action@master
         id: lighthouseCheck
         with:
-          urls: 'https://${{github.event.pull_request.head.ref}}--${{github.event.pull_request.head.repo.name}}--${{ github.event.pull_request.user.login }}.hlx.page/'
+          urls: "https://${{github.event.pull_request.head.ref}}--${{github.event.pull_request.head.repo.name}}--${{ github.event.pull_request.user.login }}.hlx.page/"
+          accessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
+          prCommentEnabled: true
+          prCommentSaveOld: true
       - name: Handle Lighthouse Check results
         uses: foo-software/lighthouse-check-status-action@master
         with:
-          accessToken: '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'
-          prCommentEnabled: true
           lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
           minAccessibilityScore: "90"
-          minPerformanceScore: "80"
+          minPerformanceScore: "85"
