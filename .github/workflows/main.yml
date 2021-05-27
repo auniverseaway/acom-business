@@ -11,7 +11,7 @@ jobs:
         uses: foo-software/lighthouse-check-action@master
         id: lighthouseCheck
         with:
-          urls: 'https://${{github.event.pull_request.head.ref}}--${{github.event.pull_request.repo.name}}--${{ github.event.pull_request.user.login }}.hlx.page/'
+          urls: 'https://${{github.event.pull_request.head.ref}}--${{github.event.pull_request.head.repo.name}}--${{ github.event.pull_request.user.login }}.hlx.page/'
       - name: Handle Lighthouse Check results
         uses: foo-software/lighthouse-check-status-action@master
         with:
