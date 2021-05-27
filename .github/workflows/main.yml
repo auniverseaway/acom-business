@@ -19,4 +19,4 @@ jobs:
           prCommentEnabled: true
           lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
           minAccessibilityScore: "90"
-          minPerformanceScore: "90"
+          minPerformanceScore: "80"
