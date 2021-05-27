@@ -2,7 +2,7 @@
 A Helix Pages site to proxy review JSON for adobe.com.
 
 Inner CDN:
-- https://acom-business--adobe.hlx.page/
+- https://acom-business--adobe.hlx.page (not currently public)
 
 ## How to develop and test locally
 
